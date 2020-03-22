@@ -1,15 +1,22 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from 'react';
+import { Link, graphql } from 'gatsby';
 
-import Layout from '../components/layout';
-import SEO from '../components/seo';
+import Layout from '../components/Layout';
+import Container from '../components/Layout/Container';
+import SEO from '../components/SEO';
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>sebastian stryczek</h1>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
-)
 
-export default IndexPage
+const Index = ({ data }) => {
+  return (
+    <>
+      <SEO title='hi!' />
+      <Layout>
+        <Container>
+          index
+        </Container>
+      </Layout>
+    </>
+  );
+};
+
+export default Index
