@@ -4,7 +4,19 @@ import { MDXRenderer } from 'gatsby-plugin-mdx';
 
 import Layout from '../components/Layout';
 
-export default ({ data, pageContext }) => {
+export const query = graphql`
+  query PostsBySlug($slug: String!) {
+    mdx(fields: { slug: { eq: $slug } }) {
+      body
+      frontmatter {
+        title
+        date(formatString: "YYYY MMMM Do")
+      }
+    }
+  }
+`;
+
+const BlogPost = ({ data, pageContext }) => {
   const { frontmatter, body } = data.mdx;
   const { previous, next } = pageContext;
   return (
@@ -34,15 +46,4 @@ export default ({ data, pageContext }) => {
   );
 };
 
-
-export const query = graphql`
-  query PostsBySlug($slug: String!) {
-    mdx(fields: { slug: { eq: $slug } }) {
-      body
-      frontmatter {
-        title
-        date(formatString: "YYYY MMMM Do")
-      }
-    }
-  }
-`;
+export default BlogPost;

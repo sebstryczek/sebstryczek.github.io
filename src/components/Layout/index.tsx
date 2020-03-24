@@ -3,7 +3,6 @@ import React from 'react';
 import useSiteMetadata from '../../hooks/useSiteMetadata';
 import PageHeader from './PageHeader';
 import PageFooter from './PageFooter';
-import SEO from '../seo';
 
 
 const Layout = ({ children }) => {
