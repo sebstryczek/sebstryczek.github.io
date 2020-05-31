@@ -19,6 +19,11 @@ jobs:
 
     - name: Setup local
       run: npm install
+    
+    - name: Setup github
+      run: |
+        git config --global user.name "Sebastian Stryczek"
+        git config --global user.email "sebastian@stryczek.pl"
 
     # - name: Build
     #   run: npm run build
