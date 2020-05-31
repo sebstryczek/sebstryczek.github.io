@@ -22,8 +22,8 @@ jobs:
     
     - name: Setup github
       run: |
-        git config --global user.name "Sebastian Stryczek"
-        git config --global user.email "sebastian@stryczek.pl"
+        git config --global user.name ""
+        git config --global user.email ""
 
     - name: Build
       run: npm run build
