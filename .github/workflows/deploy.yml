@@ -29,7 +29,7 @@ jobs:
     #   run: npm run build
 
     - name: Deploy
-      run: gatsby build --prefix-paths && gh-pages --repo 'https://sebstryczek:${{ secrets.GITHUB_TOKEN }}@github.com/sebstryczek/sebstryczek.github.io' -d public -b master
+      run: npm run build -- --repo 'https://sebstryczek:${{ secrets.GITHUB_TOKEN }}@github.com/sebstryczek/sebstryczek.github.io'
 
     # - name: Deploy
     #   uses: peaceiris/actions-gh-pages@v3
