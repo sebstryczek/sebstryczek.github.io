@@ -30,10 +30,3 @@ jobs:
 
     - name: Deploy
       run: npm run deploy -- --repo 'https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}'
-
-    # - name: Deploy
-    #   uses: peaceiris/actions-gh-pages@v3
-    #   with:
-    #     github_token: ${{ secrets.GITHUB_TOKEN }}
-    #     publish_dir: ./public
-    #     publish_branch: master

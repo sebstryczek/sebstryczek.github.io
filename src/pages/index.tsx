@@ -12,7 +12,7 @@ const Index = ({ data }) => {
 
   return (
     <Layout isUsingHeader={false} isUsingFooter={false}>
-      <SEO title='hi! test1' />
+      <SEO title='hi!' />
     </Layout>
   );
 };
