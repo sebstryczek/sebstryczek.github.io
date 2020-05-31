@@ -15,7 +15,7 @@ jobs:
     - uses: actions/setup-node@v1
     
     - name: Setup global
-      run: npm install -g gatsby
+      run: npm install -g gatsby gh-pages
 
     - name: Setup local
       run: npm install
